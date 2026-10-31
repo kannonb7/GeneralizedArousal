@@ -1,0 +1,269 @@
+ROI,X,Y,Z,Lobe Label,Lobe Name,NTW Label,NTW Name,BA Label,BA Name,Yale Label,Yale Name,Schaefer_ROI,distance,Schaefer_LabelRaw,Schaefer_Network,Network
+1,13.86,56.85,-16.64,1,R-Prefrontal,5,Default Mode,11,OrbFrontal (11),2,Fronto-parietal,160,11.79112049,17Networks_RH_LimbicB_OFC_4,Limbic,Limbic
+2,9.57,17.75,-19.5,1,R-Prefrontal,13,Unknown,11,OrbFrontal (11),8,Limbic,158,19.31218169,17Networks_RH_LimbicB_OFC_2,Limbic,Limbic
+3,5.08,34.9,-17.35,1,R-Prefrontal,13,Unknown,11,OrbFrontal (11),3,Default Mode,159,3.657430121,17Networks_RH_LimbicB_OFC_3,Limbic,Limbic
+4,15.63,34.11,-22.59,1,R-Prefrontal,13,Unknown,11,OrbFrontal (11),2,Fronto-parietal,157,6.067917621,17Networks_RH_LimbicB_OFC_1,Limbic,Limbic
+5,8.18,45.93,-1.72,1,R-Prefrontal,5,Default Mode,10,AntPFC (10),3,Default Mode,187,7.056561576,17Networks_RH_DefaultA_PFCm_1,Default,Default
+6,14.56,64.73,3.64,1,R-Prefrontal,5,Default Mode,10,AntPFC (10),3,Default Mode,160,11.32445339,17Networks_RH_LimbicB_OFC_4,Limbic,Limbic
+7,30.51,54.92,-3.52,1,R-Prefrontal,8,Frontal-Parietal,10,AntPFC (10),2,Fronto-parietal,178,9.338110874,17Networks_RH_ContB_PFClv_2,Control,Control
+8,44.56,46.19,-4.9,1,R-Prefrontal,8,Frontal-Parietal,10,AntPFC (10),2,Fronto-parietal,177,12.04889137,17Networks_RH_ContB_PFClv_1,Control,Control
+9,28.88,51.14,18.68,1,R-Prefrontal,9,Salience,10,AntPFC (10),2,Fronto-parietal,153,8.907835228,17Networks_RH_SalVentAttnB_PFCl_1,Salience,Salience
+10,8.36,53.27,23.91,1,R-Prefrontal,5,Default Mode,9,dlPFC(dorsal) (9),1,Medial Frontal,189,6.674905698,17Networks_RH_DefaultA_PFCm_3,Default,Default
+11,37.62,35.39,31.09,1,R-Prefrontal,9,Salience,9,dlPFC(dorsal) (9),8,Limbic,175,7.316306771,17Networks_RH_ContB_PFCld_1,Control,Control
+12,14.33,36.86,48.93,1,R-Prefrontal,5,Default Mode,8,FrontEyeFields (8),1,Medial Frontal,192,10.45643156,17Networks_RH_DefaultB_PFCd_1,Default,Default
+13,23.92,30.67,36.41,1,R-Prefrontal,5,Default Mode,8,FrontEyeFields (8),3,Default Mode,185,7.920970156,17Networks_RH_DefaultA_PFCd_1,Default,Default
+14,40.68,14.51,48.21,1,R-Prefrontal,8,Frontal-Parietal,8,FrontEyeFields (8),2,Fronto-parietal,176,1.695305443,17Networks_RH_ContB_PFCld_2,Control,Control
+15,6.69,21.42,31.46,1,R-Prefrontal,9,Salience,8,FrontEyeFields (8),8,Limbic,156,9.6221544,17Networks_RH_SalVentAttnB_PFCmp_1,Salience,Salience
+16,53.58,24.81,0.89,1,R-Prefrontal,11,Ventral-Attention,47,ParsOrbitalis (47),1,Medial Frontal,193,4.197279591,17Networks_RH_DefaultB_PFCv_1,Default,Default
+17,33.4,37.28,-16.43,1,R-Prefrontal,13,Unknown,47,ParsOrbitalis (47),2,Fronto-parietal,177,9.951480583,17Networks_RH_ContB_PFClv_1,Control,Control
+18,26.63,19.62,-21.33,1,R-Prefrontal,13,Unknown,47,ParsOrbitalis (47),8,Limbic,158,3.899371101,17Networks_RH_LimbicB_OFC_2,Limbic,Limbic
+19,48.29,35.68,15.15,1,R-Prefrontal,8,Frontal-Parietal,46,dlPFC(lat) (46),2,Fronto-parietal,152,11.71823548,17Networks_RH_SalVentAttnB_PFClv_1,Salience,Salience
+20,36.98,20.81,5.89,1,R-Prefrontal,9,Salience,45,Broca-Triang (45),8,Limbic,155,3.225906418,17Networks_RH_SalVentAttnB_Ins_2,Salience,Salience
+21,55.35,9.62,22.22,1,R-Prefrontal,8,Frontal-Parietal,44,Broca-Operc (44),2,Fronto-parietal,168,4.617509897,17Networks_RH_ContA_PFCl_1,Control,Control
+22,39.98,17.61,29.19,1,R-Prefrontal,8,Frontal-Parietal,44,Broca-Operc (44),2,Fronto-parietal,169,8.130673559,17Networks_RH_ContA_PFCl_2,Control,Control
+23,57.78,-8.34,27.32,2,R-MotorStrip,1,Somato-Motor,4,PrimMotor (4),4,Motor,130,4.514150469,17Networks_RH_SomMotB_Cent_1,Somatomotor,Somatomotor
+24,6,-22.28,65.57,2,R-MotorStrip,1,Somato-Motor,6,PreMot+SuppMot (6),4,Motor,122,2.21533512,17Networks_RH_SomMotA_10,Somatomotor,Somatomotor
+25,6.97,-8.07,52.92,2,R-MotorStrip,1,Somato-Motor,6,PreMot+SuppMot (6),4,Motor,115,3.349381702,17Networks_RH_SomMotA_3,Somatomotor,Somatomotor
+26,26.32,-12.91,66.2,2,R-MotorStrip,1,Somato-Motor,6,PreMot+SuppMot (6),4,Motor,120,5.750157849,17Networks_RH_SomMotA_8,Somatomotor,Somatomotor
+27,49.21,-4.49,48.12,2,R-MotorStrip,1,Somato-Motor,6,PreMot+SuppMot (6),4,Motor,114,6.768163771,17Networks_RH_SomMotA_2,Somatomotor,Somatomotor
+28,6.13,14,48.7,2,R-MotorStrip,3,Cingular-opercular,6,PreMot+SuppMot (6),8,Limbic,147,9.237278847,17Networks_RH_SalVentAttnA_FrMed_1,Salience,Salience
+29,13.73,6.27,65.35,2,R-MotorStrip,3,Cingular-opercular,6,PreMot+SuppMot (6),8,Limbic,150,5.80733676,17Networks_RH_SalVentAttnA_FrMed_2,Salience,Salience
+30,25.22,12.41,49.39,2,R-MotorStrip,8,Frontal-Parietal,6,PreMot+SuppMot (6),2,Fronto-parietal,167,9.757947864,17Networks_RH_ContA_PFCd_1,Control,Control
+31,39.74,3.44,33.99,2,R-MotorStrip,8,Frontal-Parietal,6,PreMot+SuppMot (6),2,Fronto-parietal,143,12.88351983,17Networks_RH_SalVentAttnA_PrC_1,Salience,Salience
+32,32.05,-5.36,52.05,2,R-MotorStrip,12,Dorsal-Attention,6,PreMot+SuppMot (6),8,Limbic,141,2.654912344,17Networks_RH_DorsAttnB_FEF_1,Dorsal Attention,Dorsal Attention
+33,41.97,-23.38,53.41,2,R-MotorStrip,1,Somato-Motor,1,PrimSensory (1),4,Motor,116,4.759744394,17Networks_RH_SomMotA_4,Somatomotor,Somatomotor
+34,41.79,4.97,-7.62,3,R-Insula,3,Cingular-opercular,13,Insula (13),4,Motor,144,7.50845222,17Networks_RH_SalVentAttnA_Ins_1,Salience,Salience
+35,41.39,3.51,7.15,3,R-Insula,3,Cingular-opercular,13,Insula (13),4,Motor,146,4.960756565,17Networks_RH_SalVentAttnA_FrOper_1,Salience,Salience
+36,37.5,21.09,-10.13,3,R-Insula,9,Salience,13,Insula (13),8,Limbic,154,3.806532807,17Networks_RH_SalVentAttnB_Ins_1,Salience,Salience
+37,38.34,-12.45,-1.09,3,R-Insula,10,Subcortical,13,Insula (13),4,Motor,145,12.62998784,17Networks_RH_SalVentAttnA_Ins_2,Salience,Salience
+38,32.42,-39.19,49.58,4,R-Parietal,1,Somato-Motor,1,PrimSensory (1),4,Motor,135,8.974146477,17Networks_RH_DorsAttnA_SPL_3,Dorsal Attention,Dorsal Attention
+39,20.01,-33.24,69.77,4,R-Parietal,1,Somato-Motor,1,PrimSensory (1),4,Motor,123,3.715074384,17Networks_RH_SomMotA_11,Somatomotor,Somatomotor
+40,43.34,-10.81,13.91,4,R-Parietal,1,Somato-Motor,1,PrimSensory (1),4,Motor,126,5.678665275,17Networks_RH_SomMotB_S2_1,Somatomotor,Somatomotor
+41,25.17,-52.42,68.13,4,R-Parietal,1,Somato-Motor,7,VisMotor (7),7,Visual Association,140,6.302140481,17Networks_RH_DorsAttnB_PostC_4,Dorsal Attention,Dorsal Attention
+42,14.82,-68.41,34.88,4,R-Parietal,5,Default Mode,7,VisMotor (7),5,Visual I,181,2.05992266,17Networks_RH_ContC_pCun_1,Control,Control
+43,31.62,-60.79,49.21,4,R-Parietal,8,Frontal-Parietal,7,VisMotor (7),7,Visual Association,165,6.551212489,17Networks_RH_ContA_IPS_1,Control,Control
+44,7.48,-57.28,61.79,4,R-Parietal,12,Dorsal-Attention,7,VisMotor (7),8,Limbic,139,1.837652146,17Networks_RH_DorsAttnB_PostC_3,Dorsal Attention,Dorsal Attention
+45,52.84,-27.25,40.93,4,R-Parietal,1,Somato-Motor,40,SupramargGyr (40),4,Motor,113,12.2644284,17Networks_RH_SomMotA_1,Somatomotor,Dorsal Attention
+46,58,-29.28,19.53,4,R-Parietal,4,Auditory,40,SupramargGyr (40),4,Motor,142,9.040227267,17Networks_RH_SalVentAttnA_ParOper_1,Salience,Salience
+47,54.22,-45.24,36.94,4,R-Parietal,9,Salience,40,SupramargGyr (40),2,Fronto-parietal,184,9.799558847,17Networks_RH_DefaultA_IPL_1,Default,Default
+48,47.83,-61.58,34.71,4,R-Parietal,5,Default Mode,39,AngGyrus (39),2,Fronto-parietal,173,10.37999439,17Networks_RH_ContB_IPL_1,Control,Control
+49,41.39,-75.34,27.98,4,R-Parietal,5,Default Mode,39,AngGyrus (39),3,Default Mode,194,8.209394965,17Networks_RH_DefaultC_IPL_1,Default,Default
+50,48.95,-58.12,14.36,4,R-Parietal,12,Dorsal-Attention,39,AngGyrus (39),3,Default Mode,132,5.830746195,17Networks_RH_DorsAttnA_ParOcc_1,Dorsal Attention,Dorsal Attention
+51,27.18,11.56,-39.16,5,R-Temporal,5,Default Mode,38,Temporalpole (38),4,Motor,161,4.524851787,17Networks_RH_LimbicA_TempPole_1,Limbic,Limbic
+52,39.99,18.91,-34.19,5,R-Temporal,5,Default Mode,38,Temporalpole (38),1,Medial Frontal,191,10.46610189,17Networks_RH_DefaultB_AntTemp_1,Default,Default
+53,52.84,10.9,-21.83,5,R-Temporal,5,Default Mode,38,Temporalpole (38),1,Medial Frontal,191,9.78130542,17Networks_RH_DefaultB_AntTemp_1,Default,Default
+54,50,-33.82,-0.66,5,R-Temporal,11,Ventral-Attention,21,MedTempGyrus (21),1,Medial Frontal,198,4.070104656,17Networks_RH_TempPar_2,Temporal Parietal,Default
+55,61.28,-22.87,-22.38,5,R-Temporal,13,Unknown,21,MedTempGyrus (21),2,Fronto-parietal,171,9.96993923,17Networks_RH_ContB_Temp_1,Control,Control
+56,54.5,-7.72,-31.53,5,R-Temporal,13,Unknown,20,InfTempGyrus (20),1,Medial Frontal,162,9.688230753,17Networks_RH_LimbicA_TempPole_2,Limbic,Limbic
+57,46.85,3.98,-39.77,5,R-Temporal,13,Unknown,20,InfTempGyrus (20),1,Medial Frontal,191,13.53963462,17Networks_RH_DefaultB_AntTemp_1,Default,Default
+58,40.31,-11.27,-35.81,5,R-Temporal,13,Unknown,20,InfTempGyrus (20),4,Motor,162,6.67427385,17Networks_RH_LimbicA_TempPole_2,Limbic,Limbic
+59,43.36,-26.48,-24.63,5,R-Temporal,13,Unknown,20,InfTempGyrus (20),7,Visual Association,164,9.744280883,17Networks_RH_LimbicA_TempPole_4,Limbic,Limbic
+60,31.46,0.67,-44.44,5,R-Temporal,13,Unknown,20,InfTempGyrus (20),4,Motor,161,10.55337707,17Networks_RH_LimbicA_TempPole_1,Limbic,Limbic
+61,59.18,-3.36,2.74,5,R-Temporal,4,Auditory,41,PrimAuditory (41),4,Motor,128,8.967740966,17Networks_RH_SomMotB_S2_3,Somatomotor,Somatomotor
+62,39.86,-25.56,14.38,5,R-Temporal,4,Auditory,41,PrimAuditory (41),4,Motor,127,5.648097144,17Networks_RH_SomMotB_S2_2,Somatomotor,Somatomotor
+63,61.85,-23.77,-2.81,5,R-Temporal,5,Default Mode,22,SupTempGyrus (22),4,Motor,190,4.141724078,17Networks_RH_DefaultB_Temp_1,Default,Default
+64,56.49,-8.54,-14.27,5,R-Temporal,5,Default Mode,22,SupTempGyrus (22),1,Medial Frontal,197,5.172408719,17Networks_RH_TempPar_1,Temporal Parietal,Default
+65,59.25,-43.77,8.46,5,R-Temporal,11,Ventral-Attention,22,SupTempGyrus (22),1,Medial Frontal,199,3.047658696,17Networks_RH_TempPar_3,Temporal Parietal,Default
+66,46.47,-59.85,-14.76,5,R-Temporal,7,Visual,37,Fusiform (37),7,Visual Association,131,7.718676057,17Networks_RH_DorsAttnA_TempOcc_1,Dorsal Attention,Dorsal Attention
+67,36.45,-69.08,-17.46,5,R-Temporal,7,Visual,37,Fusiform (37),7,Visual Association,101,9.443469145,17Networks_RH_VisCent_ExStr_1,Visual,Visual
+68,25.23,-44.56,-12.22,5,R-Temporal,7,Visual,37,Fusiform (37),5,Visual I,196,9.803439613,17Networks_RH_DefaultC_PHC_1,Default,Default
+69,55.22,-56.3,-4.78,5,R-Temporal,8,Frontal-Parietal,37,Fusiform (37),7,Visual Association,131,11.82713808,17Networks_RH_DorsAttnA_TempOcc_1,Dorsal Attention,Dorsal Attention
+70,60.79,-43.27,-17.64,5,R-Temporal,8,Frontal-Parietal,37,Fusiform (37),2,Fronto-parietal,172,6.501095671,17Networks_RH_ContB_Temp_2,Control,Control
+71,41.65,-45.73,-22.64,5,R-Temporal,13,Unknown,37,Fusiform (37),7,Visual Association,164,11.32831767,17Networks_RH_LimbicA_TempPole_4,Limbic,Limbic
+72,20.97,-63.69,-9,6,R-Occipital,7,Visual,19,VisualAssoc (19),5,Visual I,101,9.598761055,17Networks_RH_VisCent_ExStr_1,Visual,Visual
+73,30.1,-82.9,20.51,6,R-Occipital,7,Visual,19,VisualAssoc (19),7,Visual Association,106,12.96865884,17Networks_RH_VisCent_ExStr_5,Visual,Visual
+74,45.08,-74.29,2.58,6,R-Occipital,7,Visual,19,VisualAssoc (19),7,Visual Association,105,9.475295092,17Networks_RH_VisCent_ExStr_4,Visual,Visual
+75,18.91,-81.83,41.52,6,R-Occipital,7,Visual,19,VisualAssoc (19),5,Visual I,112,4.377116129,17Networks_RH_VisPeri_ExStrSup_3,Visual,Visual
+76,17.94,-83.43,-11.28,6,R-Occipital,7,Visual,18,SecVisual (18),6,Visual II,103,12.60939163,17Networks_RH_VisCent_Striate_1,Visual,Visual
+77,7.71,-74.97,25.03,6,R-Occipital,7,Visual,18,SecVisual (18),5,Visual I,111,3.805498713,17Networks_RH_VisPeri_ExStrSup_2,Visual,Visual
+78,23.7,-96.01,6.45,6,R-Occipital,7,Visual,18,SecVisual (18),6,Visual II,104,12.63391518,17Networks_RH_VisCent_ExStr_3,Visual,Visual
+79,6.99,-75.69,-2.84,6,R-Occipital,7,Visual,18,SecVisual (18),5,Visual I,109,11.28525429,17Networks_RH_VisPeri_StriCal_1,Visual,Visual
+80,7.83,-88.59,11.86,6,R-Occipital,7,Visual,18,SecVisual (18),5,Visual I,109,14.25891645,17Networks_RH_VisPeri_StriCal_1,Visual,Visual
+81,31.17,-91.77,-10.82,6,R-Occipital,13,Unknown,18,SecVisual (18),6,Visual II,104,7.095512454,17Networks_RH_VisCent_ExStr_3,Visual,Visual
+82,14.64,-68.33,8.28,6,R-Occipital,7,Visual,17,PrimVisual (17),5,Visual I,109,8.845390811,17Networks_RH_VisPeri_StriCal_1,Visual,Visual
+83,7.84,34.68,17.09,7,R-Limbic,5,Default Mode,32,DorsalACC (32),8,Limbic,188,6.582250059,17Networks_RH_DefaultA_PFCm_2,Default,Default
+84,5.25,-1,35.56,7,R-Limbic,1,Somato-Motor,24,VentAntCing (24),4,Motor,170,7.683718751,17Networks_RH_ContA_Cingm_1,Control,Control
+85,5.12,-38.94,27.02,7,R-Limbic,5,Default Mode,23,VentPostCing (23),3,Default Mode,186,10.47315209,17Networks_RH_DefaultA_pCunPCC_1,Default,Default
+86,12.34,-57.2,18.11,7,R-Limbic,5,Default Mode,23,VentPostCing (23),3,Default Mode,195,4.040896979,17Networks_RH_DefaultC_Rsp_1,Default,Default
+87,28.37,-53.81,7.1,7,R-Limbic,7,Visual,23,VentPostCing (23),5,Visual I,110,9.247065051,17Networks_RH_VisPeri_ExStrSup_1,Visual,Visual
+88,7.01,-18.84,29.78,7,R-Limbic,13,Unknown,23,VentPostCing (23),8,Limbic,183,6.630997395,17Networks_RH_ContC_Cingp_1,Control,Control
+89,7.83,-23.07,44.93,7,R-Limbic,1,Somato-Motor,31,DorsalPCC (31),4,Motor,148,8.801409937,17Networks_RH_SalVentAttnA_ParMed_1,Salience,Salience
+90,6.17,-57.36,38.15,7,R-Limbic,5,Default Mode,31,DorsalPCC (31),3,Default Mode,182,6.169941545,17Networks_RH_ContC_pCun_2,Control,Control
+91,8.26,-39.94,48.11,7,R-Limbic,9,Salience,31,DorsalPCC (31),8,Limbic,149,4.911665085,17Networks_RH_SalVentAttnA_ParMed_2,Salience,Salience
+92,31.16,3.71,-21.64,7,R-Limbic,13,Unknown,53,Amygdala,4,Motor,144,12.08557454,17Networks_RH_SalVentAttnA_Ins_1,Salience,Salience
+93,28.82,-36.92,-0.03,7,R-Limbic,5,Default Mode,54,Hippocampus,9,Basal Ganglia,196,14.73894578,17Networks_RH_DefaultC_PHC_1,Default,Default
+94,35.59,-14.71,-18.45,7,R-Limbic,13,Unknown,54,Hippocampus,9,Basal Ganglia,163,16.77576416,17Networks_RH_LimbicA_TempPole_3,Limbic,Limbic
+95,28.03,-28.38,-13.66,7,R-Limbic,5,Default Mode,36,Parahipp (36),9,Basal Ganglia,196,7.012037083,17Networks_RH_DefaultC_PHC_1,Default,Default
+96,29.31,-19.59,-26.31,7,R-Limbic,13,Unknown,36,Parahipp (36),3,Default Mode,163,10.27422091,17Networks_RH_LimbicA_TempPole_3,Limbic,Limbic
+97,24.59,-2.6,-30.72,7,R-Limbic,13,Unknown,36,Parahipp (36),4,Motor,163,9.003053088,17Networks_RH_LimbicA_TempPole_3,Limbic,Limbic
+98,14.6,-46.08,2.84,7,R-Limbic,7,Visual,18,SecVisual (18),5,Visual I,108,4.526970847,17Networks_RH_VisPeri_ExStrInf_2,Visual,Visual
+99,19.29,-7.65,-14.83,7,R-Limbic,13,Unknown,58,BrainStem,9,Basal Ganglia,163,17.87155408,17Networks_RH_LimbicA_TempPole_3,Limbic,Limbic
+100,32.22,-78.45,-40.43,8,R-Cerebellum,5,Default Mode,57,Cerebellum,6,Visual II,101,29.94651558,17Networks_RH_VisCent_ExStr_1,Visual,Cerebellum
+101,6.14,-50.74,-12.28,8,R-Cerebellum,7,Visual,57,Cerebellum,10,Cerebellum,108,15.44814248,17Networks_RH_VisPeri_ExStrInf_2,Visual,Cerebellum
+102,39.09,-74.91,-29.7,8,R-Cerebellum,13,Unknown,57,Cerebellum,6,Visual II,101,21.24988093,17Networks_RH_VisCent_ExStr_1,Visual,Cerebellum
+103,13.69,-40.06,-25.39,8,R-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,196,18.06094026,17Networks_RH_DefaultC_PHC_1,Default,Cerebellum
+104,23.53,-35.93,-42.96,8,R-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,164,25.09552282,17Networks_RH_LimbicA_TempPole_4,Limbic,Cerebellum
+105,6.92,-67.95,-37.77,8,R-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,101,33.30686291,17Networks_RH_VisCent_ExStr_1,Visual,Cerebellum
+106,7.15,-68.97,-20.89,8,R-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,107,17.84299978,17Networks_RH_VisPeri_ExStrInf_1,Visual,Cerebellum
+107,45.96,-46.48,-42.45,8,R-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,164,23.89070404,17Networks_RH_LimbicA_TempPole_4,Limbic,Cerebellum
+108,16.18,-47.2,-52.31,8,R-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,164,38.98047584,17Networks_RH_LimbicA_TempPole_4,Limbic,Cerebellum
+109,23.39,-59.27,-52.06,8,R-Cerebellum,13,Unknown,57,Cerebellum,4,Motor,164,40.96183819,17Networks_RH_LimbicA_TempPole_4,Limbic,Cerebellum
+110,21.07,-54.82,-23.76,8,R-Cerebellum,13,Unknown,57,Cerebellum,8,Limbic,101,19.33146088,17Networks_RH_VisCent_ExStr_1,Visual,Cerebellum
+111,11.72,-84.13,-34.65,8,R-Cerebellum,13,Unknown,57,Cerebellum,2,Fronto-parietal,103,30.7508302,17Networks_RH_VisCent_Striate_1,Visual,Cerebellum
+112,19.65,-73.53,-50.02,8,R-Cerebellum,13,Unknown,57,Cerebellum,2,Fronto-parietal,101,38.9591044,17Networks_RH_VisCent_ExStr_1,Visual,Cerebellum
+113,36.7,-57.1,-32.77,8,R-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,131,22.67004306,17Networks_RH_DorsAttnA_TempOcc_1,Dorsal Attention,Cerebellum
+114,23,-71.84,-29.07,8,R-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,101,17.84928429,17Networks_RH_VisCent_ExStr_1,Visual,Cerebellum
+115,7.63,-56.72,-50.78,8,R-Cerebellum,13,Unknown,57,Cerebellum,3,Default Mode,101,45.26657859,17Networks_RH_VisCent_ExStr_1,Visual,Cerebellum
+116,41.9,-63.98,-49.17,8,R-Cerebellum,13,Unknown,57,Cerebellum,2,Fronto-parietal,131,36.72567426,17Networks_RH_DorsAttnA_TempOcc_1,Dorsal Attention,Cerebellum
+117,7.05,-53.74,-34.35,8,R-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,107,32.07654429,17Networks_RH_VisPeri_ExStrInf_1,Visual,Cerebellum
+118,33.77,-47.23,-53.93,8,R-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,164,33.73707976,17Networks_RH_LimbicA_TempPole_4,Limbic,Cerebellum
+119,30.36,-36.44,-31.07,8,R-Cerebellum,13,Unknown,57,Cerebellum,8,Limbic,164,11.70226124,17Networks_RH_LimbicA_TempPole_4,Limbic,Cerebellum
+120,21.22,-36.39,22.63,9,R-Subcortical,5,Default Mode,0,Unknown,9,Basal Ganglia,186,20.69724724,17Networks_RH_DefaultA_pCunPCC_1,Default,Subcortical
+121,12.7,12.93,11.49,9,R-Subcortical,10,Subcortical,48,Caudate,9,Basal Ganglia,188,17.60904829,17Networks_RH_DefaultA_PFCm_2,Default,Subcortical
+122,13.75,-4.21,20.92,9,R-Subcortical,10,Subcortical,48,Caudate,9,Basal Ganglia,170,14.70248103,17Networks_RH_ContA_Cingm_1,Control,Subcortical
+123,12.56,20.19,-0.7,9,R-Subcortical,10,Subcortical,48,Caudate,9,Basal Ganglia,188,19.20456822,17Networks_RH_DefaultA_PFCm_2,Default,Subcortical
+124,26.63,6.34,0.12,9,R-Subcortical,10,Subcortical,49,Putamen,9,Basal Ganglia,146,17.35336964,17Networks_RH_SalVentAttnA_FrOper_1,Salience,Subcortical
+125,14.03,8.29,-9.5,9,R-Subcortical,10,Subcortical,49,Putamen,9,Basal Ganglia,158,22.13209823,17Networks_RH_LimbicB_OFC_2,Limbic,Subcortical
+126,10.46,-26.75,-2.17,9,R-Subcortical,10,Subcortical,50,Thalamus,9,Basal Ganglia,108,20.34079924,17Networks_RH_VisPeri_ExStrInf_2,Visual,Subcortical
+127,12.26,-27.74,13.5,9,R-Subcortical,10,Subcortical,50,Thalamus,9,Basal Ganglia,183,18.65781485,17Networks_RH_ContC_Cingp_1,Control,Subcortical
+128,5.46,-9.67,5.24,9,R-Subcortical,10,Subcortical,50,Thalamus,9,Basal Ganglia,170,27.70500765,17Networks_RH_ContA_Cingm_1,Control,Subcortical
+129,4.75,-37.16,-53.01,10,R-Brainstem,13,Unknown,58,BrainStem,10,Cerebellum,163,39.3323941,17Networks_RH_LimbicA_TempPole_3,Limbic,Subcortical
+130,9.67,-18.71,-30.66,10,R-Brainstem,13,Unknown,58,BrainStem,10,Cerebellum,163,17.09872523,17Networks_RH_LimbicA_TempPole_3,Limbic,Subcortical
+131,5.96,-22.23,-42.26,10,R-Brainstem,13,Unknown,58,BrainStem,10,Cerebellum,163,24.60042423,17Networks_RH_LimbicA_TempPole_3,Limbic,Subcortical
+132,6.31,-24.92,-17.47,10,R-Brainstem,13,Unknown,58,BrainStem,10,Cerebellum,196,23.65497622,17Networks_RH_DefaultC_PHC_1,Default,Subcortical
+133,7.47,-34.18,-37.32,10,R-Brainstem,13,Unknown,58,BrainStem,10,Cerebellum,163,29.36820377,17Networks_RH_LimbicA_TempPole_3,Limbic,Subcortical
+134,-5.42,29.14,-10.12,11,L-Prefrontal,5,Default Mode,11,OrbFrontal (11),3,Default Mode,80,6.635276028,17Networks_LH_DefaultA_PFCm_1,Default,Default
+135,-18.22,19.05,-20.98,11,L-Prefrontal,13,Unknown,11,OrbFrontal (11),8,Limbic,51,6.07940943,17Networks_LH_LimbicB_OFC_1,Limbic,Limbic
+136,-5.82,18.18,-21.59,11,L-Prefrontal,13,Unknown,11,OrbFrontal (11),8,Limbic,52,17.89173013,17Networks_LH_LimbicB_OFC_2,Limbic,Limbic
+137,-8.15,39.69,-21.44,11,L-Prefrontal,13,Unknown,11,OrbFrontal (11),1,Medial Frontal,52,4.401634819,17Networks_LH_LimbicB_OFC_2,Limbic,Limbic
+138,-6.93,48.31,-5.71,11,L-Prefrontal,5,Default Mode,10,AntPFC (10),3,Default Mode,80,13.2277711,17Networks_LH_DefaultA_PFCm_1,Default,Default
+139,-18.21,56.99,-14.27,11,L-Prefrontal,5,Default Mode,10,AntPFC (10),2,Fronto-parietal,81,11.48899216,17Networks_LH_DefaultA_PFCm_2,Default,Default
+140,-5.96,48.09,11.72,11,L-Prefrontal,5,Default Mode,10,AntPFC (10),1,Medial Frontal,82,5.601821956,17Networks_LH_DefaultA_PFCm_3,Default,Default
+141,-11.7,65.09,4.18,11,L-Prefrontal,5,Default Mode,10,AntPFC (10),3,Default Mode,81,10.17922513,17Networks_LH_DefaultA_PFCm_2,Default,Default
+142,-29.21,54.27,2.51,11,L-Prefrontal,8,Frontal-Parietal,10,AntPFC (10),2,Fronto-parietal,71,6.764324886,17Networks_LH_ContB_PFClv_2,Control,Control
+143,-42.72,47.25,-6.93,11,L-Prefrontal,8,Frontal-Parietal,10,AntPFC (10),2,Fronto-parietal,70,2.486176608,17Networks_LH_ContB_PFClv_1,Control,Control
+144,-28.81,50.12,21.68,11,L-Prefrontal,9,Salience,10,AntPFC (10),8,Limbic,48,12.0028719,17Networks_LH_SalVentAttnB_PFCl_1,Salience,Salience
+145,-10.15,55.69,30.24,11,L-Prefrontal,5,Default Mode,9,dlPFC(dorsal) (9),1,Medial Frontal,88,10.83786679,17Networks_LH_DefaultB_PFCd_1,Default,Default
+146,-27.33,34.07,36.39,11,L-Prefrontal,5,Default Mode,9,dlPFC(dorsal) (9),8,Limbic,48,10.28454305,17Networks_LH_SalVentAttnB_PFCl_1,Salience,Salience
+147,-46.12,28.15,26.79,11,L-Prefrontal,8,Frontal-Parietal,9,dlPFC(dorsal) (9),2,Fronto-parietal,63,8.30639372,17Networks_LH_ContA_PFCl_1,Control,Control
+148,-11.17,34.26,51.48,11,L-Prefrontal,5,Default Mode,8,FrontEyeFields (8),1,Medial Frontal,90,11.3785271,17Networks_LH_DefaultB_PFCd_3,Default,Default
+149,-39.35,17.2,46.7,11,L-Prefrontal,5,Default Mode,8,FrontEyeFields (8),1,Medial Frontal,69,3.042855034,17Networks_LH_ContB_PFCl_1,Control,Default
+150,-5.03,17.67,46.05,11,L-Prefrontal,9,Salience,8,FrontEyeFields (8),1,Medial Frontal,45,9.407911305,17Networks_LH_SalVentAttnA_FrMed_1,Salience,Salience
+151,-46.23,28.19,-7.12,11,L-Prefrontal,5,Default Mode,47,ParsOrbitalis (47),1,Medial Frontal,94,2.867546614,17Networks_LH_DefaultB_PFCv_3,Default,Default
+152,-28.35,36.03,-15.64,11,L-Prefrontal,13,Unknown,47,ParsOrbitalis (47),8,Limbic,93,7.669453912,17Networks_LH_DefaultB_PFCv_2,Default,Default
+153,-32.05,20.46,-15.97,11,L-Prefrontal,13,Unknown,47,ParsOrbitalis (47),1,Medial Frontal,92,4.152203623,17Networks_LH_DefaultB_PFCv_1,Default,Default
+154,-42.97,42.04,11.04,11,L-Prefrontal,8,Frontal-Parietal,46,dlPFC(lat) (46),2,Fronto-parietal,62,5.744890367,17Networks_LH_ContA_PFClv_1,Control,Control
+155,-32.45,22.12,5.84,11,L-Prefrontal,9,Salience,45,Broca-Triang (45),8,Limbic,49,2.344473812,17Networks_LH_SalVentAttnB_Ins_1,Salience,Salience
+156,-53.07,18.36,10.55,11,L-Prefrontal,8,Frontal-Parietal,44,Broca-Operc (44),1,Medial Frontal,95,5.274416738,17Networks_LH_DefaultB_PFCv_4,Default,Default
+157,-46.23,7.93,28.58,11,L-Prefrontal,8,Frontal-Parietal,6,PreMot+SuppMot (6),2,Fronto-parietal,64,2.796195509,17Networks_LH_ContA_PFCl_2,Control,Control
+158,-41.59,-14.68,44.79,12,L-MotorStrip,1,Somato-Motor,4,PrimMotor (4),4,Motor,28,8.166245891,17Networks_LH_SomMotB_Cent_2,Somatomotor,Somatomotor
+159,-58.09,-5.56,27.19,12,L-MotorStrip,1,Somato-Motor,6,PreMot+SuppMot (6),4,Motor,27,4.77914778,17Networks_LH_SomMotB_Cent_1,Somatomotor,Somatomotor
+160,-16.2,-19.23,69.53,12,L-MotorStrip,1,Somato-Motor,6,PreMot+SuppMot (6),4,Motor,18,9.706389166,17Networks_LH_SomMotA_6,Somatomotor,Somatomotor
+161,-6.47,-4.31,47.6,12,L-MotorStrip,3,Cingular-opercular,6,PreMot+SuppMot (6),4,Motor,13,8.232686828,17Networks_LH_SomMotA_1,Somatomotor,Somatomotor
+162,-9.06,0.38,66.53,12,L-MotorStrip,3,Cingular-opercular,6,PreMot+SuppMot (6),1,Medial Frontal,46,4.660283834,17Networks_LH_SalVentAttnA_FrMed_2,Salience,Salience
+163,-56.98,-3.43,6.82,12,L-MotorStrip,4,Auditory,6,PreMot+SuppMot (6),4,Motor,24,4.292121466,17Networks_LH_SomMotB_S2_2,Somatomotor,Somatomotor
+164,-23.22,10.66,53.61,12,L-MotorStrip,8,Frontal-Parietal,6,PreMot+SuppMot (6),2,Fronto-parietal,61,9.426927043,17Networks_LH_ContA_PFCd_1,Control,Control
+165,-45.8,-0.43,49.28,12,L-MotorStrip,8,Frontal-Parietal,6,PreMot+SuppMot (6),1,Medial Frontal,28,9.031378686,17Networks_LH_SomMotB_Cent_2,Somatomotor,Somatomotor
+166,-27.58,-9.08,55.86,12,L-MotorStrip,12,Dorsal-Attention,6,PreMot+SuppMot (6),4,Motor,39,6.594746824,17Networks_LH_DorsAttnB_FEF_1,Dorsal Attention,Dorsal Attention
+167,-35.88,-23.3,65.6,12,L-MotorStrip,1,Somato-Motor,1,PrimSensory (1),4,Motor,16,6.020624455,17Networks_LH_SomMotA_4,Somatomotor,Somatomotor
+168,-39.09,1.71,9.54,13,L-Insula,3,Cingular-opercular,13,Insula (13),4,Motor,42,1.706371735,17Networks_LH_SalVentAttnA_FrOper_1,Salience,Salience
+169,-38.71,8.06,-4.77,13,L-Insula,3,Cingular-opercular,13,Insula (13),8,Limbic,41,12.19856784,17Networks_LH_SalVentAttnA_Ins_1,Salience,Salience
+170,-37.75,-12.86,-1.43,13,L-Insula,10,Subcortical,13,Insula (13),4,Motor,41,9.17378963,17Networks_LH_SalVentAttnA_Ins_1,Salience,Salience
+171,-50.64,-23.79,41.37,14,L-Parietal,1,Somato-Motor,1,PrimSensory (1),4,Motor,35,4.439976399,17Networks_LH_DorsAttnB_PostC_1,Dorsal Attention,Dorsal Attention
+172,-23.5,-31.62,63.61,14,L-Parietal,1,Somato-Motor,1,PrimSensory (1),4,Motor,20,6.047941246,17Networks_LH_SomMotA_8,Somatomotor,Somatomotor
+173,-41.23,-15.57,14.45,14,L-Parietal,4,Auditory,1,PrimSensory (1),4,Motor,23,7.1027886,17Networks_LH_SomMotB_S2_1,Somatomotor,Somatomotor
+174,-7.35,-34.12,67.46,14,L-Parietal,1,Somato-Motor,7,VisMotor (7),4,Motor,19,3.917452439,17Networks_LH_SomMotA_7,Somatomotor,Somatomotor
+175,-25.38,-54.75,64.05,14,L-Parietal,1,Somato-Motor,7,VisMotor (7),7,Visual Association,34,7.943815508,17Networks_LH_DorsAttnA_SPL_3,Dorsal Attention,Dorsal Attention
+176,-9.48,-71.01,31.86,14,L-Parietal,7,Visual,7,VisMotor (7),5,Visual I,72,5.9859684,17Networks_LH_ContC_pCun_1,Control,Control
+177,-28.41,-62.35,40.42,14,L-Parietal,12,Dorsal-Attention,7,VisMotor (7),7,Visual Association,32,8.419638844,17Networks_LH_DorsAttnA_SPL_1,Dorsal Attention,Dorsal Attention
+178,-9.83,-66.34,55.14,14,L-Parietal,13,Unknown,7,VisMotor (7),8,Limbic,73,8.304839883,17Networks_LH_ContC_pCun_2,Control,Control
+179,-35.72,-39.34,47.75,14,L-Parietal,1,Somato-Motor,40,SupramargGyr (40),4,Motor,36,6.523549964,17Networks_LH_DorsAttnB_PostC_2,Dorsal Attention,Dorsal Attention
+180,-42.21,-31.23,15.89,14,L-Parietal,4,Auditory,40,SupramargGyr (40),4,Motor,23,11.37455366,17Networks_LH_SomMotB_S2_1,Somatomotor,Somatomotor
+181,-59.51,-25.89,21.9,14,L-Parietal,4,Auditory,40,SupramargGyr (40),4,Motor,40,6.855273532,17Networks_LH_SalVentAttnA_ParOper_1,Salience,Salience
+182,-42.05,-65.62,41.73,14,L-Parietal,5,Default Mode,39,AngGyrus (39),2,Fronto-parietal,75,5.148334535,17Networks_LH_DefaultA_IPL_1,Default,Default
+183,-51.38,-56.29,20.47,14,L-Parietal,5,Default Mode,39,AngGyrus (39),1,Medial Frontal,100,3.928662927,17Networks_LH_TempPar_2,Temporal Parietal,Default
+184,-53.42,-43.53,38.77,14,L-Parietal,8,Frontal-Parietal,39,AngGyrus (39),2,Fronto-parietal,47,8.037036623,17Networks_LH_SalVentAttnB_IPL_1,Salience,Salience
+185,-38.01,6.07,-37.86,15,L-Temporal,5,Default Mode,38,Temporalpole (38),1,Medial Frontal,83,10.46688209,17Networks_LH_DefaultB_Temp_1,Default,Default
+186,-34.65,18.63,-32.23,15,L-Temporal,5,Default Mode,38,Temporalpole (38),1,Medial Frontal,55,11.35807901,17Networks_LH_LimbicA_TempPole_3,Limbic,Limbic
+187,-49.49,11.11,-30.56,15,L-Temporal,5,Default Mode,38,Temporalpole (38),1,Medial Frontal,83,4.435933712,17Networks_LH_DefaultB_Temp_1,Default,Default
+188,-49.73,6.39,-15.15,15,L-Temporal,5,Default Mode,38,Temporalpole (38),4,Motor,56,8.400783072,17Networks_LH_LimbicA_TempPole_4,Limbic,Limbic
+189,-22.92,9,-38.79,15,L-Temporal,13,Unknown,38,Temporalpole (38),4,Motor,55,6.782812897,17Networks_LH_LimbicA_TempPole_3,Limbic,Limbic
+190,-57.62,-6.37,-22.69,15,L-Temporal,5,Default Mode,21,MedTempGyrus (21),1,Medial Frontal,85,10.57414478,17Networks_LH_DefaultB_Temp_3,Default,Default
+191,-58.98,-29.96,3.49,15,L-Temporal,5,Default Mode,21,MedTempGyrus (21),4,Motor,86,7.13370417,17Networks_LH_DefaultB_Temp_4,Default,Default
+192,-57.83,-47.48,5.24,15,L-Temporal,11,Ventral-Attention,21,MedTempGyrus (21),1,Medial Frontal,99,5.985020145,17Networks_LH_TempPar_1,Temporal Parietal,Default
+193,-59.85,-27.42,-18.14,15,L-Temporal,13,Unknown,21,MedTempGyrus (21),2,Fronto-parietal,84,9.542783242,17Networks_LH_DefaultB_Temp_2,Default,Default
+194,-49.31,-4.7,-37.37,15,L-Temporal,13,Unknown,20,InfTempGyrus (20),1,Medial Frontal,83,14.07665756,17Networks_LH_DefaultB_Temp_1,Default,Default
+195,-37.84,-13.23,-29.26,15,L-Temporal,13,Unknown,20,InfTempGyrus (20),4,Motor,54,10.55930537,17Networks_LH_LimbicA_TempPole_2,Limbic,Limbic
+196,-51.76,-18.15,-28.79,15,L-Temporal,13,Unknown,20,InfTempGyrus (20),2,Fronto-parietal,54,6.921453885,17Networks_LH_LimbicA_TempPole_2,Limbic,Limbic
+197,-57.05,-14.52,-6.87,15,L-Temporal,5,Default Mode,22,SupTempGyrus (22),4,Motor,85,10.12360702,17Networks_LH_DefaultB_Temp_3,Default,Default
+198,-26.69,-42.72,-16.14,15,L-Temporal,5,Default Mode,37,Fusiform (37),5,Visual I,98,11.20660178,17Networks_LH_DefaultC_PHC_1,Default,Default
+199,-60.35,-50.04,-14.02,15,L-Temporal,13,Unknown,37,Fusiform (37),2,Fronto-parietal,67,7.298428913,17Networks_LH_ContB_Temp_1,Control,Control
+200,-42.57,-52.11,-17.36,15,L-Temporal,13,Unknown,37,Fusiform (37),7,Visual Association,29,4.504508114,17Networks_LH_DorsAttnA_TempOcc_1,Dorsal Attention,Dorsal Attention
+201,-46.67,-39.97,-24.3,15,L-Temporal,13,Unknown,37,Fusiform (37),7,Visual Association,29,10.11953842,17Networks_LH_DorsAttnA_TempOcc_1,Dorsal Attention,Dorsal Attention
+202,-29.96,-5.77,-40.93,15,L-Temporal,13,Unknown,36,Parahipp (36),4,Motor,53,2.368767864,17Networks_LH_LimbicA_TempPole_1,Limbic,Limbic
+203,-41.25,-75.44,22.76,16,L-Occipital,5,Default Mode,19,VisualAssoc (19),3,Default Mode,96,9.974836697,17Networks_LH_DefaultC_IPL_1,Default,Default
+204,-31.63,-87.16,12.5,16,L-Occipital,7,Visual,19,VisualAssoc (19),7,Visual Association,5,8.899972823,17Networks_LH_VisCent_ExStr_4,Visual,Visual
+205,-17.04,-50.71,0.78,16,L-Occipital,7,Visual,19,VisualAssoc (19),5,Visual I,9,7.766560764,17Networks_LH_VisPeri_ExStrInf_3,Visual,Visual
+206,-43.24,-70.37,-13.83,16,L-Occipital,7,Visual,19,VisualAssoc (19),7,Visual Association,30,5.932343982,17Networks_LH_DorsAttnA_TempOcc_2,Dorsal Attention,Dorsal Attention
+207,-25.9,-63.14,-12.25,16,L-Occipital,7,Visual,19,VisualAssoc (19),5,Visual I,7,10.83788146,17Networks_LH_VisPeri_ExStrInf_1,Visual,Visual
+208,-16.79,-84.92,33.04,16,L-Occipital,7,Visual,19,VisualAssoc (19),5,Visual I,12,11.07229295,17Networks_LH_VisPeri_ExStrSup_2,Visual,Visual
+209,-48.34,-67.39,1.14,16,L-Occipital,12,Dorsal-Attention,19,VisualAssoc (19),7,Visual Association,31,9.036458164,17Networks_LH_DorsAttnA_ParOcc_1,Dorsal Attention,Dorsal Attention
+210,-36.02,-84.15,-3.91,16,L-Occipital,7,Visual,18,SecVisual (18),7,Visual Association,5,14.67373677,17Networks_LH_VisCent_ExStr_4,Visual,Visual
+211,-8.88,-70.65,-1.67,16,L-Occipital,7,Visual,18,SecVisual (18),5,Visual I,8,4.839721437,17Networks_LH_VisPeri_ExStrInf_2,Visual,Visual
+212,-10.83,-98.14,7.63,16,L-Occipital,7,Visual,18,SecVisual (18),6,Visual II,4,11.91376298,17Networks_LH_VisCent_ExStr_3,Visual,Visual
+213,-14.72,-83.97,-13.06,16,L-Occipital,13,Unknown,18,SecVisual (18),6,Visual II,1,12.82296748,17Networks_LH_VisCent_ExStr_1,Visual,Visual
+214,-22.27,-96.64,-10.06,16,L-Occipital,13,Unknown,18,SecVisual (18),6,Visual II,2,5.211805037,17Networks_LH_VisCent_ExStr_2,Visual,Visual
+215,-5.99,-81.21,12.17,16,L-Occipital,7,Visual,17,PrimVisual (17),5,Visual I,10,13.44068402,17Networks_LH_VisPeri_StriCal_1,Visual,Visual
+216,-22.11,-66.7,7.45,16,L-Occipital,7,Visual,17,PrimVisual (17),5,Visual I,10,11.28673752,17Networks_LH_VisPeri_StriCal_1,Visual,Visual
+217,-23.59,-41.29,19.92,17,L-Limbic,4,Auditory,0,Unknown,9,Basal Ganglia,97,20.32549706,17Networks_LH_DefaultC_Rsp_1,Default,Default
+218,-7.75,-22.37,46.05,17,L-Limbic,1,Somato-Motor,6,PreMot+SuppMot (6),4,Motor,13,9.963398077,17Networks_LH_SomMotA_1,Somatomotor,Somatomotor
+219,-5.97,34.11,26.28,17,L-Limbic,5,Default Mode,32,DorsalACC (32),1,Medial Frontal,50,4.497955033,17Networks_LH_SalVentAttnB_PFCmp_1,Salience,Salience
+220,-3.83,-5.05,32.6,17,L-Limbic,3,Cingular-opercular,24,VentAntCing (24),8,Limbic,66,10.19580538,17Networks_LH_ContA_Cingm_1,Control,Control
+221,-5.1,13.15,28.74,17,L-Limbic,3,Cingular-opercular,24,VentAntCing (24),8,Limbic,66,8.826144622,17Networks_LH_ContA_Cingm_1,Control,Control
+222,-8.6,-58.79,17.61,17,L-Limbic,5,Default Mode,23,VentPostCing (23),3,Default Mode,97,5.748884373,17Networks_LH_DefaultC_Rsp_1,Default,Default
+223,-5,-36.04,31.98,17,L-Limbic,13,Unknown,23,VentPostCing (23),3,Default Mode,78,8.021458939,17Networks_LH_DefaultA_pCunPCC_2,Default,Default
+224,-7.37,-18.23,30.02,17,L-Limbic,13,Unknown,23,VentPostCing (23),8,Limbic,74,11.34310761,17Networks_LH_ContC_Cingp_1,Control,Control
+225,-6.5,-53.94,37.44,17,L-Limbic,5,Default Mode,31,DorsalPCC (31),3,Default Mode,79,4.420878407,17Networks_LH_DefaultA_pCunPCC_3,Default,Default
+226,-8.79,-42.55,50.11,17,L-Limbic,5,Default Mode,31,DorsalPCC (31),8,Limbic,44,8.478560072,17Networks_LH_SalVentAttnA_ParMed_1,Salience,Salience
+227,-7.47,-42.12,13.32,17,L-Limbic,5,Default Mode,30,AgrRetrolimb (30),3,Default Mode,97,14.32909258,17Networks_LH_DefaultC_Rsp_1,Default,Default
+228,-26.79,2.42,-18.71,17,L-Limbic,13,Unknown,53,Amygdala,4,Motor,56,16.56036714,17Networks_LH_LimbicA_TempPole_4,Limbic,Limbic
+229,-21.49,-36.87,5.75,17,L-Limbic,5,Default Mode,54,Hippocampus,9,Basal Ganglia,9,13.7565308,17Networks_LH_VisPeri_ExStrInf_3,Visual,Visual
+230,-32.09,-40.19,-3.99,17,L-Limbic,5,Default Mode,54,Hippocampus,9,Basal Ganglia,7,16.1003294,17Networks_LH_VisPeri_ExStrInf_1,Visual,Visual
+231,-22.7,-12.76,-17.43,17,L-Limbic,13,Unknown,54,Hippocampus,9,Basal Ganglia,98,19.16635291,17Networks_LH_DefaultC_PHC_1,Default,Default
+232,-35.68,-24.81,-14.94,17,L-Limbic,13,Unknown,54,Hippocampus,9,Basal Ganglia,98,12.35290193,17Networks_LH_DefaultC_PHC_1,Default,Default
+233,-20.71,-30.77,-11.12,17,L-Limbic,5,Default Mode,36,Parahipp (36),9,Basal Ganglia,98,8.436380195,17Networks_LH_DefaultC_PHC_1,Default,Default
+234,-30.54,-23.92,-26.61,17,L-Limbic,13,Unknown,36,Parahipp (36),9,Basal Ganglia,98,12.6644835,17Networks_LH_DefaultC_PHC_1,Default,Default
+235,-21.38,-4.06,-29.37,17,L-Limbic,13,Unknown,36,Parahipp (36),4,Motor,53,12.3389127,17Networks_LH_LimbicA_TempPole_1,Limbic,Limbic
+236,-6.52,-66.2,-37.75,18,L-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,1,32.48702134,17Networks_LH_VisCent_ExStr_1,Visual,Cerebellum
+237,-8.7,-50.56,-39.56,18,L-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,98,33.5232856,17Networks_LH_DefaultC_PHC_1,Default,Cerebellum
+238,-36.95,-52.94,-31.11,18,L-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,29,14.15927454,17Networks_LH_DorsAttnA_TempOcc_1,Dorsal Attention,Cerebellum
+239,-8.72,-55.18,-52.14,18,L-Cerebellum,13,Unknown,57,Cerebellum,3,Default Mode,98,45.00240894,17Networks_LH_DefaultC_PHC_1,Default,Cerebellum
+240,-21.24,-70.02,-48.88,18,L-Cerebellum,13,Unknown,57,Cerebellum,7,Visual Association,1,36.23015047,17Networks_LH_VisCent_ExStr_1,Visual,Cerebellum
+241,-40.32,-74.2,-29.15,18,L-Cerebellum,13,Unknown,57,Cerebellum,6,Visual II,1,21.76661298,17Networks_LH_VisCent_ExStr_1,Visual,Cerebellum
+242,-30.17,-80.21,-40.35,18,L-Cerebellum,13,Unknown,57,Cerebellum,2,Fronto-parietal,1,27.43541272,17Networks_LH_VisCent_ExStr_1,Visual,Cerebellum
+243,-19.31,-46.44,-53.2,18,L-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,98,38.92092553,17Networks_LH_DefaultC_PHC_1,Default,Cerebellum
+244,-6.5,-50.18,-11.37,18,L-Cerebellum,13,Unknown,57,Cerebellum,8,Limbic,9,12.67603608,17Networks_LH_VisPeri_ExStrInf_3,Visual,Cerebellum
+245,-27.82,-35.98,-30.88,18,L-Cerebellum,13,Unknown,57,Cerebellum,8,Limbic,98,13.93538404,17Networks_LH_DefaultC_PHC_1,Default,Cerebellum
+246,-42.57,-63.71,-46.29,18,L-Cerebellum,13,Unknown,57,Cerebellum,2,Fronto-parietal,29,31.07115829,17Networks_LH_DorsAttnA_TempOcc_1,Dorsal Attention,Cerebellum
+247,-10.29,-81.71,-32.29,18,L-Cerebellum,13,Unknown,57,Cerebellum,2,Fronto-parietal,1,24.54967872,17Networks_LH_VisCent_ExStr_1,Visual,Cerebellum
+248,-8,-68.4,-19.85,18,L-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,8,15.52788721,17Networks_LH_VisPeri_ExStrInf_2,Visual,Cerebellum
+249,-34.64,-50.33,-53.98,18,L-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,29,35.7185694,17Networks_LH_DorsAttnA_TempOcc_1,Dorsal Attention,Cerebellum
+250,-22.72,-57.94,-48.79,18,L-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,29,37.19651108,17Networks_LH_DorsAttnA_TempOcc_1,Dorsal Attention,Cerebellum
+251,-10.3,-37.72,-25.07,18,L-Cerebellum,13,Unknown,57,Cerebellum,8,Limbic,98,18.17168597,17Networks_LH_DefaultC_PHC_1,Default,Cerebellum
+252,-46.41,-46.77,-42.86,18,L-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,29,23.70567661,17Networks_LH_DorsAttnA_TempOcc_1,Dorsal Attention,Cerebellum
+253,-26.31,-69.52,-30.6,18,L-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,1,18.59269352,17Networks_LH_VisCent_ExStr_1,Visual,Cerebellum
+254,-21.25,-53.41,-23.56,18,L-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,7,14.70957462,17Networks_LH_VisPeri_ExStrInf_1,Visual,Cerebellum
+255,-6.62,-54.67,-26.32,18,L-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,7,24.37716966,17Networks_LH_VisPeri_ExStrInf_1,Visual,Cerebellum
+256,-24.3,-37.79,-44.28,18,L-Cerebellum,13,Unknown,57,Cerebellum,10,Cerebellum,98,27.23767215,17Networks_LH_DefaultC_PHC_1,Default,Cerebellum
+257,-10.85,23.86,9.64,19,L-Subcortical,9,Salience,0,Unknown,9,Basal Ganglia,50,16.83788414,17Networks_LH_SalVentAttnB_PFCmp_1,Salience,Subcortical
+258,-12.52,11.62,8.68,19,L-Subcortical,10,Subcortical,48,Caudate,9,Basal Ganglia,49,23.12469039,17Networks_LH_SalVentAttnB_Ins_1,Salience,Subcortical
+259,-10.4,10.9,-8.13,19,L-Subcortical,10,Subcortical,48,Caudate,9,Basal Ganglia,51,20.74735277,17Networks_LH_LimbicB_OFC_1,Limbic,Subcortical
+260,-14.6,-3.51,21.09,19,L-Subcortical,10,Subcortical,48,Caudate,9,Basal Ganglia,66,16.21907101,17Networks_LH_ContA_Cingm_1,Control,Subcortical
+261,-24.78,5.62,-0.08,19,L-Subcortical,10,Subcortical,49,Putamen,9,Basal Ganglia,41,17.73809476,17Networks_LH_SalVentAttnA_Ins_1,Salience,Subcortical
+262,-9.59,-25.43,-1.42,19,L-Subcortical,10,Subcortical,50,Thalamus,9,Basal Ganglia,9,19.76698853,17Networks_LH_VisPeri_ExStrInf_3,Visual,Subcortical
+263,-4.87,-10.34,5.83,19,L-Subcortical,10,Subcortical,50,Thalamus,9,Basal Ganglia,66,27.81898342,17Networks_LH_ContA_Cingm_1,Control,Subcortical
+264,-11.61,-25.62,14.8,19,L-Subcortical,10,Subcortical,50,Thalamus,9,Basal Ganglia,74,14.37859809,17Networks_LH_ContC_Cingp_1,Control,Subcortical
+265,-4.97,-21.51,-15.83,20,L-Brainstem,10,Subcortical,58,BrainStem,9,Basal Ganglia,98,23.26427009,17Networks_LH_DefaultC_PHC_1,Default,Subcortical
+266,-4.5,-37.98,-53.13,20,L-Brainstem,13,Unknown,58,BrainStem,10,Cerebellum,98,41.75322296,17Networks_LH_DefaultC_PHC_1,Default,Subcortical
+267,-7.21,-33.04,-39.41,20,L-Brainstem,13,Unknown,58,BrainStem,10,Cerebellum,98,28.55743422,17Networks_LH_DefaultC_PHC_1,Default,Subcortical
+268,-6.12,-18.93,-36.77,20,L-Brainstem,13,Unknown,58,BrainStem,10,Cerebellum,53,26.75514762,17Networks_LH_LimbicA_TempPole_1,Limbic,Subcortical
