@@ -1,0 +1,280 @@
+---
+title: "d_Recall: recall fidelity ~ decoded arousal"
+author: "Yulin Tong, Kannon Bhattacharyya"
+date: "2025-09-07"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+library(dplyr)
+library(tidyr)
+library(readr)
+library(brms)        # Bayesian multilevel models
+library(posterior)
+library(bayestestR)  # hdi()
+library(ggplot2)
+library(cowplot)     # plot_grid
+
+rstan::rstan_options(auto_write = TRUE)
+options(mc.cores = parallel::detectCores())
+
+# Work from this file's folder (when knitting, knitr already does this; interactively, use RStudio's path)
+if (interactive() && requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+  this_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
+  if (nzchar(this_dir)) setwd(this_dir)
+}
+
+# ---- paths: inputs from the Shen p < .05 classification run, everything else in 4_results/4_recall ----
+RESULTS    <- "../4_results"
+CLS_DIR    <- file.path(RESULTS, "2_classification_Shen_0.05")
+RECALL_DIR <- file.path(RESULTS, "4_recall")
+FIT_DIR    <- file.path(RECALL_DIR, "fits")
+FIG_DIR    <- file.path(RECALL_DIR, "figures")
+for (d in c(RECALL_DIR, FIT_DIR, FIG_DIR)) dir.create(d, showWarnings = FALSE, recursive = TRUE)
+
+# ---- settings ----
+REFIT           <- TRUE    # FALSE = reuse fits saved in 4_recall/fits (when the combined data have not changed)
+DATASET_RE      <- TRUE    # include (1 | dataset); all variables are z-scored within dataset, so it is ~0 anyway
+WRITE_PRED_CSVS <- TRUE    # also save each decoded-arousal matrix as CSV in 4_recall (for checking)
+
+# Decoded-arousal predictors: column name, plot label, and the B-notebook folder / file stem.
+# FilmFest file = <folder>/FilmFest_from_<stem>_predicted.npy, Sherlock = <folder>/Sherlock_from_<stem>_predicted.npy
+PREDICTORS <- tribble(
+  ~column,                     ~label,          ~folder,                          ~ff_stem,          ~sher_stem,
+  "decoded_arousal_pupil",     "Pupil Rest",    "13_Movies_from_Pupil_Rest",      "Pupil_Rest",      "Pupil_Rest",
+  "decoded_arousal_eeg",       "EEG Rest",      "11_Movies_from_EEG_Rest",        "EEG_Rest",        "EEG_Rest",
+  "decoded_arousal_paranoia",  "Pupil Story",   "15_Movies_from_Pupil_Story",     "Pupil_Story",     "Pupil_Story",
+  # Movies: leave-one-subject-out within the pooled movies (Sherlock + FilmFest minus the test subject).
+  # The previous version (Sher -> FF, FF -> Sher) was: "1_Movies_within", "Sherlock", "FF"
+  "decoded_arousal_movie",     "Movies",        "24_Movies_within_LOSO",          "Movies_LOSO",     "Movies_LOSO",
+  "decoded_arousal_network",   "Network",       "23_Movies_from_Network",         "Network",         "Network"
+)
+# 1_Movies_within (old Movies predictor) names its files FF_from_Sherlock / Sherlock_from_FF
+pred_file <- function(folder, target, stem) {
+  if (folder == "1_Movies_within") {
+    f <- if (target == "FilmFest") "FF_from_Sherlock_predicted.npy" else "Sherlock_from_FF_predicted.npy"
+  } else {
+    f <- paste0(target, "_from_", stem, "_predicted.npy")
+  }
+  file.path(CLS_DIR, folder, f)
+}
+
+# ---- subjects / events (rows and columns of the B-notebook prediction matrices) ----
+FF_SUBJECTS   <- c(1, 2, 7:14, 16:20)        # 15 subjects (1-20 without 3, 4, 5, 6, 15)
+FF_EVENTS     <- 1:68
+SHER_SUBJECTS <- c(1:6, 8:13, 15:16)         # 14 subjects (1-16 without 7, 14)
+SHER_EVENTS   <- c(2:27, 29:50)              # 48 columns = events 2-27, 29-50
+SHER_DROP     <- tibble(subj = 105L, events = c(149L, 150L))   # Sherlock subject 5 has no events 49, 50
+```
+
+```{r load-behaviour}
+# 15 subj * 68 events = 1020 (FilmFest); 14 subj * 48 events - 2 = 670 (Sherlock), after the +100 offsets
+beh_ff <- read.csv(file.path(RECALL_DIR, "filmfest_allData_threshold_015_new.csv")) %>%
+  mutate(subj = as.integer(subj), events = as.integer(events))
+beh_sr <- read.csv(file.path(RECALL_DIR, "Sherlock_allData_threshold_015_new.csv")) %>%
+  mutate(subj = as.integer(subj) + 100L, events = as.integer(events) + 100L)
+```
+
+# Decoded arousal: .npy (B notebook, Shen p < .05) → long format
+
+```{r decoded}
+read_npy <- function(path) {
+  if (!file.exists(path)) stop("Missing: ", path)
+  if (requireNamespace("RcppCNPy", quietly = TRUE)) {
+    m <- RcppCNPy::npyLoad(path)                      # C-order 2D array -> same shape as in numpy
+  } else {
+    np <- reticulate::import("numpy", convert = FALSE)
+    m <- reticulate::py_to_r(np$load(path))
+  }
+  as.matrix(m)
+}
+
+to_long <- function(m, subjects, events, value_name, path) {
+  if (!identical(dim(m), c(length(subjects), length(events)))) {
+    stop(sprintf("%s is %s, expected %d subjects x %d events", basename(path),
+                 paste(dim(m), collapse = " x "), length(subjects), length(events)))
+  }
+  tibble(subj   = rep(as.integer(subjects), times = length(events)),
+         events = rep(as.integer(events), each = length(subjects)),
+         !!value_name := as.vector(m))                 # column-major: subjects vary fastest
+}
+
+decoded <- list(ff = list(), sr = list())
+available <- c()
+for (k in seq_len(nrow(PREDICTORS))) {
+  p <- PREDICTORS[k, ]
+  f_ff <- pred_file(p$folder, "FilmFest", p$ff_stem)
+  f_sr <- pred_file(p$folder, "Sherlock", p$sher_stem)
+  if (!file.exists(f_ff) || !file.exists(f_sr)) {
+    message("Skipping ", p$label, ": no predictions in ", file.path(CLS_DIR, p$folder))
+    next
+  }
+  m_ff <- read_npy(f_ff)
+  m_sr <- read_npy(f_sr)
+  if (WRITE_PRED_CSVS) {
+    write.csv(m_ff, file.path(RECALL_DIR, paste0("FilmFest_", p$column, ".csv")))
+    write.csv(m_sr, file.path(RECALL_DIR, paste0("Sherlock_", p$column, ".csv")))
+  }
+  decoded$ff[[p$column]] <- to_long(m_ff, FF_SUBJECTS, FF_EVENTS, p$column, f_ff)
+  decoded$sr[[p$column]] <- to_long(m_sr, SHER_SUBJECTS + 100L, SHER_EVENTS + 100L, p$column, f_sr) %>%
+    anti_join(SHER_DROP, by = c("subj", "events"))
+  available <- c(available, p$column)
+  cat(sprintf("%-20s FilmFest %s, Sherlock %s\n", p$label, paste(dim(m_ff), collapse = "x"),
+              paste(dim(m_sr), collapse = "x")))
+}
+PREDICTORS <- filter(PREDICTORS, column %in% available)
+```
+
+# Combine data (z-scored within dataset)
+
+```{r combine}
+zscore <- function(x) (x - mean(x, na.rm = TRUE)) / sd(x, na.rm = TRUE)
+num_cols <- c("recall_accuracy", "PC_movie_avg", "Eg_movie", PREDICTORS$column)
+
+combine <- function(beh, dec, dataset) {
+  Reduce(function(x, y) inner_join(x, y, by = c("subj", "events")), dec, init = beh) %>%
+    select(subj, events, event_duration, all_of(num_cols)) %>%
+    mutate(across(all_of(num_cols), zscore),
+           dataset = dataset)
+}
+df_ff <- combine(beh_ff, decoded$ff, 1L)
+df_sr <- combine(beh_sr, decoded$sr, 2L)
+d1 <- bind_rows(df_ff, df_sr) %>%
+  mutate(subj = factor(subj), events = factor(events), dataset = factor(dataset))
+
+cat(sprintf("FilmFest rows: %d (expected %d)\nSherlock rows: %d (expected %d)\nCombined: %d (expected %d)\n",
+            nrow(df_ff), 15 * 68, nrow(df_sr), 13 * 48 + 46, nrow(d1), 15 * 68 + 13 * 48 + 46))
+if (nrow(d1) != 15 * 68 + 13 * 48 + 46) warning("Row count differs from the expected 1690: check subjects/events")
+
+write.csv(d1, file.path(RECALL_DIR, "decoded_arousal_combined.csv"), row.names = FALSE)
+```
+
+# Models: recall_accuracy ~ decoded arousal (one model per predictor) + null
+
+```{r models}
+prior <- c(prior(normal(0, 1), class = Intercept),
+           prior(normal(0, 1), class = b),
+           prior(exponential(1), class = sd),
+           prior(exponential(1), class = sigma))
+prior_null <- c(prior(normal(0, 1), class = Intercept),
+                prior(exponential(1), class = sd),
+                prior(exponential(1), class = sigma))
+re <- if (DATASET_RE) "(1 | subj) + (1 | dataset)" else "(1 | subj)"
+brm_args <- list(control = list(adapt_delta = 0.95), chains = 4, cores = 4, iter = 4000, warmup = 1000,
+                 seed = 123, save_pars = save_pars(all = TRUE))
+# You may need Rtools 4.5 for this part: https://cran.r-project.org/bin/windows/Rtools/
+
+# Every predictor model has the same form (recall ~ x), so Stan compiles once and the rest reuse it
+fit_path <- function(name) file.path(FIT_DIR, paste0("fit_", name, ".rds"))
+fits <- list()
+base_fit <- NULL
+for (k in seq_len(nrow(PREDICTORS))) {
+  col <- PREDICTORS$column[k]
+  dk <- mutate(d1, x = .data[[col]])
+  if (!REFIT && file.exists(fit_path(col))) {
+    fit <- readRDS(fit_path(col))
+  } else if (is.null(base_fit)) {
+    fit <- do.call(brm, c(list(formula = as.formula(paste("recall_accuracy ~ x +", re)), data = dk,
+                               prior = prior), brm_args))
+  } else {
+    # same model, new data: no recompiling (falls back to a fresh brm() if the saved model cannot be reused)
+    fit <- tryCatch(
+      do.call(update, c(list(base_fit, newdata = dk, recompile = FALSE), brm_args[names(brm_args) != "save_pars"])),
+      error = function(e) do.call(brm, c(list(formula = as.formula(paste("recall_accuracy ~ x +", re)), data = dk,
+                                              prior = prior), brm_args)))
+  }
+  if (is.null(base_fit)) base_fit <- fit
+  fit <- add_criterion(fit, c("waic", "loo"))
+  saveRDS(fit, fit_path(col))
+  fits[[col]] <- fit
+}
+
+if (!REFIT && file.exists(fit_path("null"))) {
+  fit_null <- readRDS(fit_path("null"))
+} else {
+  fit_null <- do.call(brm, c(list(formula = as.formula(paste("recall_accuracy ~ 1 +", re)), data = d1,
+                                  prior = prior_null), brm_args))
+}
+fit_null <- add_criterion(fit_null, c("waic", "loo"))
+saveRDS(fit_null, fit_path("null"))
+
+# ---- posterior summaries (saved as recall_<name>.rds in 4_recall, as before) ----
+short <- c(decoded_arousal_pupil = "pupil", decoded_arousal_eeg = "eeg", decoded_arousal_paranoia = "paranoia",
+           decoded_arousal_movie = "movie", decoded_arousal_network = "network")
+summary_rows <- list()
+for (k in seq_len(nrow(PREDICTORS))) {
+  col <- PREDICTORS$column[k]
+  draws <- as_draws_df(fits[[col]])$b_x
+  h <- hdi(draws, ci = 0.95, method = "HDI")
+  post <- list(draws = as.numeric(draws), hdi = data.frame(low = h$CI_low, high = h$CI_high),
+               mean = mean(draws), median = median(draws), p_gt0 = mean(draws > 0))
+  saveRDS(post, file.path(RECALL_DIR, paste0("recall_", short[[col]], ".rds")))
+  summary_rows[[col]] <- tibble(predictor = PREDICTORS$label[k], mean = post$mean, hdi_low = h$CI_low,
+                                hdi_high = h$CI_high, p_gt0 = post$p_gt0)
+  cat(sprintf("\n--- Recall ~ decoded arousal (%s) ---\nPosterior mean %.3f, 95%% HDI [%.3f, %.3f], P(b > 0) = %.3f\n",
+              PREDICTORS$label[k], post$mean, h$CI_low, h$CI_high, post$p_gt0))
+}
+posterior_summary <- bind_rows(summary_rows)
+write.csv(posterior_summary, file.path(RECALL_DIR, "recall_posterior_summary.csv"), row.names = FALSE)
+
+# ---- model comparison (LOO; higher elpd = better; first row = best) ----
+all_fits <- c(fits, list(null = fit_null))
+cmp <- do.call(loo_compare, c(unname(all_fits),
+                               list(criterion = "loo", model_names = c(PREDICTORS$label, "Null"))))
+print(cmp)
+write.csv(as.data.frame(cmp), file.path(RECALL_DIR, "recall_loo_compare.csv"))
+waic_table <- tibble(model = c(PREDICTORS$label, "Null"),
+                     waic = sapply(all_fits, function(f) f$criteria$waic$estimates["waic", "Estimate"]))
+print(waic_table)
+write.csv(waic_table, file.path(RECALL_DIR, "recall_waic.csv"), row.names = FALSE)
+```
+
+# Posterior plots
+
+```{r plots, fig.width=14, fig.height=3.5}
+theme_set(theme_classic(base_size = 14))
+
+load_post <- function(name) {
+  path <- file.path(RECALL_DIR, paste0("recall_", name, ".rds"))
+  if (file.exists(path)) readRDS(path) else NULL
+}
+
+posts <- setNames(lapply(short[PREDICTORS$column], load_post), PREDICTORS$label)
+# one x range for every panel (all posteriors + 0), so panels are comparable
+rng <- range(c(0, unlist(lapply(posts, function(p) p$draws))))
+xlim <- rng + c(-1, 1) * 0.05 * diff(rng)
+
+posterior_plot <- function(obj, title) {
+  if (is.null(obj)) return(ggplot() + theme_void() + ggtitle(paste0(title, "\n(no posterior saved)")))
+  ggplot(data.frame(value = obj$draws), aes(x = value)) +
+    geom_histogram(bins = 40, fill = "lightblue") +
+    geom_vline(xintercept = 0, colour = "azure4", linetype = 2) +
+    annotate("segment", x = obj$hdi$low, xend = obj$hdi$high, y = 0, yend = 0, linewidth = 2) +
+    annotate("text", x = c(obj$hdi$low, obj$hdi$high), y = 0, vjust = -0.8, size = 4,
+             label = round(c(obj$hdi$low, obj$hdi$high), 3)) +
+    annotate("text", x = -Inf, y = Inf, hjust = -0.05, vjust = 1.3, size = 4,
+             label = paste0("Mean = ", round(obj$mean, 3))) +
+    annotate("text", x = -Inf, y = Inf, hjust = -0.05, vjust = 3.0, size = 4, fontface = "italic",
+             label = paste0("P(posterior > 0) = ", round(obj$p_gt0, 3))) +
+    coord_cartesian(xlim = xlim) +
+    labs(x = "Posterior distribution", y = NULL, title = title) +
+    theme_classic() +
+    theme(text = element_text(size = 14, family = "Arial", colour = "black"),
+          axis.text.x = element_text(size = 12, colour = "black"),
+          axis.text.y = element_blank(), axis.ticks.y = element_blank(),
+          panel.background = element_rect(fill = "transparent"),
+          plot.background = element_rect(fill = "transparent", colour = NA),
+          plot.title = element_text(size = 14, face = "bold", hjust = 0.5))
+}
+
+panels <- Map(posterior_plot, posts, names(posts))
+grid <- plot_grid(plotlist = panels, nrow = 1, align = "hv")
+ggsave(file.path(FIG_DIR, "posterior_recall_all.png"), grid, width = 2.8 * length(panels), height = 3.5, dpi = 300)
+for (lab in names(panels)) {
+  ggsave(file.path(FIG_DIR, paste0("posterior_recall_", gsub("[^A-Za-z]+", "_", lab), ".png")), panels[[lab]],
+         width = 4, height = 3.5, dpi = 300)
+}
+grid
+```
