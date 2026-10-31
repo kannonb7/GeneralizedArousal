@@ -40,7 +40,7 @@ The models were trained on dynamic FC computed as in `a_Arousal_FC`: confound-re
 
 ## Additional items you will need to rerun the pipeline
 
-1) **fMRI data.** All 5 datasets are publicly available on OpenNeuro. We preprocessed each one with fMRIPrep (details in the paper), then [TODO: describe the filtering applied after fMRIPrep]. For Sherlock, the BOLD data were also trimmed to the movie TRs. `a_Arousal_FC` only regresses the confounds and standardises; it does not filter. Put the preprocessed BOLD time courses and fMRIPrep confounds files in the matching `1_data/*_fMRI` folder.
+1) **fMRI data.** All 5 datasets are publicly available on OpenNeuro. We preprocessed each one with fMRIPrep and then filtered it (details in the paper). Put the preprocessed BOLD time courses and fMRIPrep confounds files in the matching `1_data/*_fMRI` folder. `a_Arousal_FC` regresses the confounds and standardises the data but does not filter. The Sherlock BOLD files contain only the movie TRs; the scripts take the matching rows of each confounds file.
 
    **Expected file names.** The scripts find runs and confounds by file name, so name the files like this. `*` means anything. Only BOLD files may end in `.nii.gz` in these folders, and subjects are read in sorted order.
 
@@ -57,8 +57,8 @@ The models were trained on dynamic FC computed as in `a_Arousal_FC`: confound-re
    - **EEG Rest (26):** sub-02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 17, 18, 19, 20, 21, 22, 23, 25, 26, 28, 29, 31, 33
    - **Pupil Rest (27):** sub-pa1372, 1387, 1393, 1416, 1560, 1582, 1604, 1674, 1700, 1766, 1792, 1811, 1834, 1841, 1859, 1913, 1940, 1978, 2079, 2100, 2106, 2196, 2213, 2216, 2220, 2221, 2226
    - **Pupil Story (22):** sub-tb2994, 3132, 3240, 3279, 3512, 3592, 3602, 3626, 3646, 3744, 3757, 3784, 3810, 3846, 3858, 3920, 3929, 3964, 3977, 4450, 4547, 4572
-   - **FilmFestival (20):** [TODO]
-   - **Sherlock (15):** [TODO]
+   - **FilmFestival (20):** sub-01 to sub-20
+   - **Sherlock (15):** sub-01, 02, 03, 04, 05, 06, 08, 09, 10, 11, 12, 13, 14, 15, 16
    - **EEG Sleep:** the sleep runs from Gu et al. (2023). `b_Classification` excludes the subjects listed in its `EXCLUDE` setting.
 
 2) **Arousal data.**
@@ -67,14 +67,14 @@ The models were trained on dynamic FC computed as in `a_Arousal_FC`: confound-re
    - **EEG Sleep stages:** on Gu et al. (2023)'s OpenNeuro page under `sourcedata`. Put them in `1_data/1_EEG_Sleep_fMRI/wakestage/` as `sub-XX-sleep-stage.tsv` (column `30-sec_epoch_sleep_stage`).
    - **EEG Rest arousal:** calculate spectral slopes from Gu et al. (2023)'s EEG data (details in the paper). Save the resulting array, shape (26 subjects, 2 runs, TRs per run) in the same subject order as the EEG Rest BOLD files, as `1_data/1_EEG_Arousal/SpectralSlopes_05Hz_80Hz.npy`.
 
-3) **External predictive models (`5_external_cpms`).** `e_FeatureMaps` compares our arousal networks with two published connectome-based models, both defined in the Shen 268 atlas. Download them from the original authors [TODO: citations / links] and place them as follows:
+3) **External predictive models (`5_external_cpms`).** `e_FeatureMaps` compares our arousal networks with two published connectome-based models, both defined in the Shen 268 atlas. Download them from the original authors and place them as follows:
    ```
    5_external_cpms/
    ├── saCPM_Rosenberg2016/
-   │   └── saCPM.mat                      # sustained-attention CPM (Rosenberg et al., 2016):
+   │   └── saCPM.mat                      # sustained-attention CPM:
    │                                      #   variables high_attention_mask, low_attention_mask (268 x 268, binary)
    └── SurpriseEFPM_Zhang2025/
-       ├── surprise_EFPM_pos_mask.txt     # surprise edge-fluctuation model (Zhang et al., 2025):
+       ├── surprise_EFPM_pos_mask.txt     # surprise edge-fluctuation model:
        └── surprise_EFPM_neg_mask.txt     #   positive / negative networks (268 x 268, binary)
    ```
 
