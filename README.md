@@ -112,7 +112,7 @@ Places the four arousal models and the two external models in a common reference
 ### Atlas
 `a_Arousal_FC`, `b_Classification` and `c_Network` run with either:
 - the **Shen** atlas (268 ROIs, default), or
-- **Schaefer 200 + 8 Brainnetome subcortical** ROIs (208 ROIs).
+- **Schaefer 200 (17 Network) + 8 Brainnetome subcortical** ROIs (208 ROIs).
 
 To switch, set `ATLAS_NAME` in `a` and `ATLAS` in `b` and `c` to `"Schaefer"`. Schaefer outputs end in `_Schaefer` (results in `2_classification_Schaefer_{ALPHA}/` and `3_network_Schaefer_{ALPHA}/`), so the two atlases never overwrite each other. The first Schaefer run of `c` needs internet, because nilearn downloads the Schaefer ROI names. `e_FeatureMaps` uses both atlases, so run `a` and `b` once for each atlas before running `e`.
 
